@@ -1,7 +1,5 @@
 
 
-
-
 #' Launch Shiny Application
 #'
 #' This function initializes and runs the Shiny application by combining the UI and server components.
@@ -13,16 +11,21 @@
 #' @export
 # Define the function to launch the Shiny app
 launchApp <- function() {
-library(shiny)
-library(shinyWidgets)
-library(ggplot2)
-library(dplyr)
-library(rstatix)
-library(ComplexHeatmap)
-library(circlize)
-library(DESeq2)
-library(httr)
-library(bslib)
+  # List of required packages
+  required_packages <- c(
+    "shiny", "shinyWidgets", "ggplot2", "dplyr", "rstatix", 
+    "ComplexHeatmap", "circlize", "DESeq2", "httr", "bslib"
+  )
+  
+  # Check if packages are installed, install if necessary
+  for (pkg in required_packages) {
+    if (!requireNamespace(pkg, quietly = TRUE)) {
+      install.packages(pkg)
+    }
+    library(pkg, character.only = TRUE)
+  }
+  
+  # Launch the shiny app
   shiny::shinyApp(ui = ui(), server = server)
 }
 
