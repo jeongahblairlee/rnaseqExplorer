@@ -1,13 +1,4 @@
-library(shiny)
-library(shinyWidgets)
-library(ggplot2)
-library(dplyr)
-library(rstatix)
-library(ComplexHeatmap)
-library(circlize)
-library(DESeq2)
-library(httr)
-library(bslib)
+
 
 
 
@@ -22,6 +13,16 @@ library(bslib)
 #' @export
 # Define the function to launch the Shiny app
 launchApp <- function() {
+library(shiny)
+library(shinyWidgets)
+library(ggplot2)
+library(dplyr)
+library(rstatix)
+library(ComplexHeatmap)
+library(circlize)
+library(DESeq2)
+library(httr)
+library(bslib)
   shiny::shinyApp(ui = ui(), server = server)
 }
 
