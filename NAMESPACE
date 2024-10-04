@@ -2,6 +2,5 @@
 
 export(get_gene_details)
 export(launchApp)
-export(run_app)
 export(server)
 export(ui)
