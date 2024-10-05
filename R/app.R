@@ -915,7 +915,6 @@ server <- function(input, output, session) {
 
     # Download Heatmap
     output$download_heatmap <- downloadHandler(
-      num_genes <- as.numeric(input$num_genes),
       filename = function() {
         paste("heatmap_top", num_genes,"_genes_", Sys.Date(), ".tiff", sep = "")
       },
@@ -952,15 +951,14 @@ server <- function(input, output, session) {
     filename = function() {
       paste("heatmap_top", input$num_genes, "_gene_expression_", Sys.Date(), ".csv", sep = "")
     },
-    # Ensure 'res' and 'vsd' are defined in the global environment or accessible
-    data <- values$processed_data,
-    res <- data$res,
-    vsd <- data$vsd,
 
     content = function(file) {
       # Retrieve number of genes
       num_genes <- as.numeric(input$num_genes)
-
+      # Ensure 'res' and 'vsd' are defined in the global environment or accessible
+      data <- values$processed_data
+      res <- data$res
+      vsd <- data$vsd
       #bring the res
       res_filtered <- res[!is.na(res$pvalue), ]
       
