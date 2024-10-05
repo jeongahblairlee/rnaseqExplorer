@@ -747,7 +747,7 @@ server <- function(input, output, session) {
         paste("boxplot", "_",m3$gene[1],"_",Sys.Date(), ".tiff", sep = "")
       },
       content = function(file) {
-        tiff(file,res=300,units="in", width=5, height=5.5)
+        tiff(file,res=300,units="in", width=5.5, height=5.5)
         print(pp)
         dev.off()
       }
