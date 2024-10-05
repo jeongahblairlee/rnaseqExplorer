@@ -952,20 +952,16 @@ server <- function(input, output, session) {
     filename = function() {
       paste("heatmap_top", input$num_genes, "_gene_expression_", Sys.Date(), ".csv", sep = "")
     },
-    
+    # Ensure 'res' and 'vsd' are defined in the global environment or accessible
+    data <- values$processed_data,
+    res <- data$res,
+    vsd <- data$vsd,
+
     content = function(file) {
       # Retrieve number of genes
       num_genes <- as.numeric(input$num_genes)
-      data <- values$processed_data
-      res <- data$res
-      Z <- data$Z
-      coldata <- data$coldata
-      vsd <- data$vsd
-      cts <- data$cts
-      resOrdered <- data$resOrdered
-      dds_filtered <- data$dds_filtered
 
-      # Ensure 'res' and 'vsd' are defined in the global environment or accessible
+      #bring the res
       res_filtered <- res[!is.na(res$pvalue), ]
       
       # Sort by p-value in ascending order
