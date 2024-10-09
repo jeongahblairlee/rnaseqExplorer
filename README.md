@@ -19,7 +19,7 @@ https://jeongahblairlee.shinyapps.io/rnaseqExplorer/
 
 ## Workflow
 
-In the **Workflow** tab, you can view the overall workflow of the RNAseq Explorer application:
+In the **Workflow**, you can see the overall workflow of the RNAseq Explorer application:
 
 ![Workflow](https://raw.githubusercontent.com/jeongahblairlee/rnaseqExplorer/refs/heads/main/notebook/workflow.png)
 
