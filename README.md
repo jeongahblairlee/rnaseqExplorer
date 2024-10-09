@@ -1,12 +1,4 @@
-<table style="width: 100%;">
-  <tr>
-    <td style="text-align: center;">
-      Welcome to <br>
-      <img src="https://raw.githubusercontent.com/jeongahblairlee/rnaseqExplorer/refs/heads/main/notebook/logo_pic.png" alt="logo" style="width: 150px; height: auto;">
-    </td>
-  </tr>
-</table>
-
+# Welcome to <img src="https://raw.githubusercontent.com/jeongahblairlee/rnaseqExplorer/refs/heads/main/notebook/logo_pic.png" alt="logo" style="width: 200px; height: auto;">
 
 
 
