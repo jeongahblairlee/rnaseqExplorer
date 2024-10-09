@@ -57,6 +57,21 @@ Perform Principal Component Analysis (PCA) to understand the variance in your da
 
 To use this application, clone the repository and follow the setup instructions in the documentation.
 
+### In R
+
+You can install the package using the following command:
+
+```r
+devtools::install_github("jeongahblairlee/rnaseqExplorer")
+library(rnaseqExplorer)
+launchApp()
+
+You can also access the application via the web interface:
+
+https://jeongahblairlee.shinyapps.io/rnaseqExplorer/
+
+**Warning**: In case the dataset is large, I recommend using R due to limitations from the web server.
+
 ## Contributions
 
 We welcome contributions to enhance the functionality and usability of RNAseq Explorer. Please feel free to submit a pull request or open an issue to discuss improvements.
