@@ -37,6 +37,7 @@ You can also access the application via the web interface:
 
 <br>
 <br>
+
 ## Workflow
 
 In the **Workflow**, you can see the overall workflow of the RNAseq Explorer application:
