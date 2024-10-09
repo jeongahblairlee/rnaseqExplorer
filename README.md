@@ -1,4 +1,4 @@
-# Welcome to <img src="https://raw.githubusercontent.com/jeongahblairlee/rnaseqExplorer/refs/heads/main/notebook/logo_pic.png" alt="logo" style="width:400px; height: auto;">
+# <img src="https://raw.githubusercontent.com/jeongahblairlee/rnaseqExplorer/refs/heads/main/notebook/logo_pic.png" alt="logo" style="width:400px; height: auto;">
 
 
 
