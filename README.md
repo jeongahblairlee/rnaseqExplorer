@@ -25,7 +25,7 @@ You can install the package using the following command:
 devtools::install_github("jeongahblairlee/rnaseqExplorer")
 library(rnaseqExplorer)
 launchApp()
-```r
+```
 
 ### In web interface
 
