@@ -15,7 +15,7 @@ You can try web version:
 https://jeongahblairlee.shinyapps.io/rnaseqExplorer/
 
 
-## Workflow Tab
+## Workflow
 
 In the **Workflow** tab, you can view the overall workflow of the RNAseq Explorer application:
 
