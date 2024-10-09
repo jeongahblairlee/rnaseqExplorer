@@ -1,4 +1,5 @@
-# Welcome to **rnaseqExplorer** 
+# Welcome to ![logo](https://raw.githubusercontent.com/jeongahblairlee/rnaseqExplorer/refs/heads/main/notebook/logo_pic.png)
+
 
 Welcome to the **rnaseqExplorer** This tool is designed to help users easily upload and analyze RNA sequencing data. The application provides a user-friendly interface that allows you to visualize your data through various plots and explore the results in an intuitive way.
 
