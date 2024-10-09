@@ -34,9 +34,7 @@ You can also access the application via the web interface:
 **https://jeongahblairlee.shinyapps.io/rnaseqExplorer/**
 
 > **Warning:** In case the dataset is large, I recommend using R due to limitations from the web server.
-
-
-
+<br><br>
 
 ## Workflow
 
