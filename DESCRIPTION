@@ -1,6 +1,6 @@
 Package: rnaseqExplorer
 Type: Package
-Title: What the Package Does (Title Case)
+Title: rnaseqExplorer
 Version: 0.1.0
 Author: Jeongah Lee
 Maintainer: Jeongah Lee <jeongahblair@gmail.com>
@@ -11,6 +11,15 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.3.2
 Suggests: 
-    knitr,
-    rmarkdown
+    "shiny",
+    "shinyWidgets",
+    "ggplot2", 
+    "dplyr",
+    "rstatix",
+    "circlize",
+    "bslib",
+    "reader",
+    "ComplexHeatmap",
+    "DESeq2",
+    "httr"
 VignetteBuilder: knitr
