@@ -13,8 +13,27 @@ Welcome to the **rnaseqExplorer**. This software is designed to help users easil
 
 With its dynamic, interactive design, **rnaseqExplorer** is an essential tool for RNA-seq dataset analysis. It empowers bench biologists to conduct exploratory data analysis with ease, while delivering in-depth insights for seasoned data analysts. 💡
 
-You can try web version: 
+## Getting Started
+
+To use this application, clone the repository and follow the setup instructions in the documentation.
+
+### In R
+
+You can install the package using the following command:
+
+```r
+devtools::install_github("jeongahblairlee/rnaseqExplorer")
+library(rnaseqExplorer)
+launchApp()
+```r
+
+### In web interface
+
+You can also access the application via the web interface:
+
 https://jeongahblairlee.shinyapps.io/rnaseqExplorer/
+
+**Warning**: In case the dataset is large, I recommend using R due to limitations from the web server.
 
 
 ## Workflow
@@ -53,24 +72,6 @@ Perform Principal Component Analysis (PCA) to understand the variance in your da
 
 ![PCA](https://raw.githubusercontent.com/jeongahblairlee/rnaseqExplorer/refs/heads/main/notebook/function4.png)
 
-## Getting Started
-
-To use this application, clone the repository and follow the setup instructions in the documentation.
-
-### In R
-
-You can install the package using the following command:
-
-```r
-devtools::install_github("jeongahblairlee/rnaseqExplorer")
-library(rnaseqExplorer)
-launchApp()
-
-You can also access the application via the web interface:
-
-https://jeongahblairlee.shinyapps.io/rnaseqExplorer/
-
-**Warning**: In case the dataset is large, I recommend using R due to limitations from the web server.
 
 ## Contributions
 
