@@ -104,7 +104,7 @@ citation <- function(package = "rnaseqExplorer") {
 }
 
 .onLoad <- function(libname, pkgname) {
-  print("If you use the rnaseqExplorer package in your research, please consider citing it as follows:")
+  print("If you use the rnaseqExplorer package in your research, please cite it as follows:")
   citation.rnaseqExplorer()
 }
 
@@ -1124,7 +1124,11 @@ server <- function(input, output, session) {
       "<li>🔍 Gene annotation</li>",
       "</ul>",  # End the unordered list
       br(),
-      "With its dynamic interactive design, <span class='bold-text'>rnaseqExplorer</span> is an essential tool for RNA-seq dataset analysis, empowering bench biologists to conduct exploratory data analysis with ease while delivering in-depth insights for seasoned data analysts. 💡"
+      "With its dynamic interactive design, <span class='bold-text'>rnaseqExplorer</span> is an essential tool for RNA-seq dataset analysis, empowering bench biologists to conduct exploratory data analysis with ease while delivering in-depth insights for seasoned data analysts. 💡",
+      br(),  # Add a line break before the citation
+      "<span class='italic-text'>If you use the rnaseqExplorer package in your research, please cite it as follows:</span><br>",
+      "<span class='italic-text'>Jeongah Lee. (2024). rnaseqExplorer: A comprehensive Shiny application for analyzing RNA sequencing data. R package version 0.1.0. https://github.com/jeongahblairlee/rnaseqExplorer</span>"
+      
     ))
   })
 
