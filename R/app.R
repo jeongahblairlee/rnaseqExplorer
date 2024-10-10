@@ -91,7 +91,6 @@ get_gene_details <- function(ensembl_id) {
 
 #' @export
 citation.rnaseqExplorer <- function() {
-  cat("If you use the rnaseqExplorer package in your research, please consider citing it as follows:\n")
   cat("Jeongah Lee. (2024). rnaseqExplorer: A comprehensive Shiny application for analyzing RNA sequencing data. R package version 0.1.0. https://github.com/jeongahblairlee/rnaseqExplorer\n")
 }
 
@@ -105,7 +104,7 @@ citation <- function(package = "rnaseqExplorer") {
 }
 
 .onLoad <- function(libname, pkgname) {
-  print("Package rnaseqExplorer has been loaded!")  # Add this line for debugging
+  print("If you use the rnaseqExplorer package in your research, please consider citing it as follows:")
   citation.rnaseqExplorer()
 }
 
@@ -1136,7 +1135,7 @@ server <- function(input, output, session) {
 
 }
 
-shinyApp(ui = ui, server = server)
+#shinyApp(ui = ui, server = server)
 
 
 
