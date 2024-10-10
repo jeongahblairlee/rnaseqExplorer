@@ -100,6 +100,7 @@ A BibTeX entry for LaTeX users is:
   note = {R package version 0.1.0},
   url = {https://github.com/jeongahblairlee/rnaseqExplorer},
 }
+```
 
 ## Contact
 
