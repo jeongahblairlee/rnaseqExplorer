@@ -89,6 +89,28 @@ get_gene_details <- function(ensembl_id) {
 }
 
 
+#' @export
+citation.rnaseqExplorer <- function() {
+  cat("If you use the rnaseqExplorer package in your research, please consider citing it as follows:\n")
+  cat("Jeongah Lee. (2024). rnaseqExplorer: A comprehensive Shiny application for analyzing RNA sequencing data. R package version 0.1.0. https://github.com/jeongahblairlee/rnaseqExplorer\n")
+}
+
+#' @export
+citation <- function(package = "rnaseqExplorer") {
+  if (package == "rnaseqExplorer") {
+    citation.rnaseqExplorer()
+  } else {
+    methods::citation(package)
+  }
+}
+
+.onLoad <- function(libname, pkgname) {
+  print("Package rnaseqExplorer has been loaded!")  # Add this line for debugging
+  citation.rnaseqExplorer()
+}
+
+
+
 
 
 #' Creating the Shiny UI for displaying user information
@@ -813,28 +835,26 @@ server <- function(input, output, session) {
       if (data_type == "genename") {
         names <- rownames(top10_cts)
         gene_symbol <-c()
-
         withProgress(message = 'Fetching gene names...', {
           for (i in 1:length(names)) {
             # incProgress(1 / length(names), detail = paste("Fetching:", names[i]))  # Update progress
             gene_name <- get_gene_details(names[i])
 
-            if (!is.null(gene_name$id) & !is.null(gene_name$display_name)) {
+            if (!is.null(gene_name) && !is.null(gene_name$id) && !is.null(gene_name$display_name)) {
               # If both id and display_name are not NULL, assign them
               gene_symbol$id[i] <- gene_name$id
               gene_symbol$symbol[i] <- gene_name$display_name
             } else {
-              # If either id or display_name is NULL, assign "NA"
-              gene_symbol$id[i] <- ifelse(!is.null(gene_name$id), gene_name$id, "NA")
-              gene_symbol$symbol[i] <- ifelse(!is.null(gene_name$display_name), gene_name$display_name, gene_name$id)
+              # If gene_name is NULL or id/display_name are NULL, assign id to both
+              gene_symbol$id[i] <- names[i]  # Use the current gene name as the id
+              gene_symbol$symbol[i] <- gene_symbol$id[i]  # Set symbol to id
+              }
             }
-            # To visualize the progress
-          }
-
-          gene_symbol <- as.data.frame(gene_symbol)
+        gene_symbol <- as.data.frame(gene_symbol)
         })
 
 
+        
         # Extract relevant columns from gene_symbol
         colnames(gene_symbol) <- c("id", "display_name")
 
@@ -1116,7 +1136,7 @@ server <- function(input, output, session) {
 
 }
 
-#shinyApp(ui = ui, server = server)
+shinyApp(ui = ui, server = server)
 
 
 
