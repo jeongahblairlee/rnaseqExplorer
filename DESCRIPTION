@@ -6,9 +6,10 @@ Author: Jeongah Lee
 Maintainer: Jeongah Lee <jeongahblair@gmail.com>
 Description: a Shiny application for analyzing gene expression data.
     This package serves as a general-purpose interactive visualization for RNA-seq analysis, guiding users in easily exploring transcriptome data
-License: 
+License: Jeongah Lee
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.3.2
-Suggests: 
-VignetteBuilder: knitr
+URL: https://github.com/jeongahblairlee/rnaseqExplorer
+Citation: Please cite this package as: Lee, J. (2024). rnaseqExplorer: A comprehensive Shiny application for analyzing RNA sequencing data (Version 0.1.0) [R package]. GitHub. https://github.com/jeongahblairlee/rnaseqExplorer
+
