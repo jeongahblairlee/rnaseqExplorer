@@ -88,19 +88,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 If you use the `rnaseqExplorer` package in your research, please consider citing it as follows:
 
 > ***Jeongah Lee. (2024). *rnaseqExplorer: A comprehensive Shiny application for analyzing RNA sequencing data* (Version 0.1.0) [R package]. GitHub. https://github.com/jeongahblairlee/rnaseqExplorer***
-> 
 
-A BibTeX entry for LaTeX users is:
-
-```bibtex
-@Manual{,
-  title = {rnaseqExplorer: A comprehensive Shiny application for analyzing RNA sequencing data},
-  author = {Jeongah Lee},
-  year = {2024},
-  note = {R package version 0.1.0},
-  url = {https://github.com/jeongahblairlee/rnaseqExplorer},
-}
-```
 
 ## Contact
 
