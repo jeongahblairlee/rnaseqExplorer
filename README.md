@@ -83,6 +83,11 @@ We welcome contributions to enhance the functionality and usability of RNAseq Ex
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+## Citation
+
+If you use the `rnaseqExplorer` package in your research, please consider citing it as follows:
+@misc{rnaseqExplorer, author = {Jeongah Lee}, title = {RNAseq Explorer: A Comprehensive Shiny Application for Analyzing RNA Sequencing Data}, year = {2024}, url = {https://github.com/jeongahblairlee/rnaseqExplorer}, note = {R package version 0.1.0} }
+
 ## Contact
 
 For any inquiries or issues, please contact [Jeongah Lee](jeongahblair@gmail.com). 
