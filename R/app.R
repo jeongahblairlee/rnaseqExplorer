@@ -61,9 +61,9 @@ options(repos = c(CRAN = "https://cloud.r-project.org/"))  # Setting a CRAN mirr
   }
   library(httr)
 
- #    # Launch the shiny app
-    shiny::shinyApp(ui = ui(), server = server)
-  }
+ # #    # Launch the shiny app
+ shiny::shinyApp(ui = ui(), server = server)
+   }
  #  
   
 #' getting gene annotation
@@ -91,7 +91,8 @@ get_gene_details <- function(ensembl_id) {
 
 #' @export
 citation.rnaseqExplorer <- function() {
-  cat("Jeongah Lee. (2024). rnaseqExplorer: A comprehensive Shiny application for analyzing RNA sequencing data. R package version 0.1.0. https://github.com/jeongahblairlee/rnaseqExplorer\n")
+  cat("If you use the rnaseqExplorer package in your research, please cite it as follows:
+      Jeongah Lee. (2024). rnaseqExplorer: A comprehensive Shiny application for analyzing RNA sequencing data. R package version 0.1.0. https://github.com/jeongahblairlee/rnaseqExplorer")
 }
 
 #' @export
@@ -104,7 +105,6 @@ citation <- function(package = "rnaseqExplorer") {
 }
 
 .onLoad <- function(libname, pkgname) {
-  print("If you use the rnaseqExplorer package in your research, please cite it as follows:")
   citation.rnaseqExplorer()
 }
 
@@ -129,6 +129,10 @@ ui <- function() {
     # Add CSS for consistent spacing and styles
     tags$head(
       tags$style(HTML("
+        .italic-text {
+          font-style: italic; /* Make text italic */
+        }
+        
         .large-button {
           font-size: 20px !important;
           padding: 10px 20px !important;
@@ -162,6 +166,14 @@ ui <- function() {
         .large-text {
           font-size: 24px !important;
         }
+
+        .highlight-text { /* Missing bracket was here */
+          color: #000435; /* Dark gray for the text color */
+          background-color: #f0f0f0;
+          padding: 5px; /* Adds space around the text */
+          border-radius: 4px; /* Rounded corners for the background */
+          font-size: 14px !important;
+        } /* Added closing bracket */
       "))
     ),
     
@@ -187,7 +199,7 @@ ui <- function() {
                    h4("Workflow"),
                    br(),
                    tags$img(src = "https://raw.githubusercontent.com/jeongahblairlee/rnaseqExplorer/refs/heads/main/notebook/workflow.png",
-                            style = "width: 100%; height: auto; display: block; margin: auto;",
+                            style = "width: 80%; height: auto; display: block; margin: auto;",
                             alt = "workflow"),
                    br()
                )
@@ -199,7 +211,7 @@ ui <- function() {
                    br(),
                    h4("1. Upload your data:"),
                    tags$img(src = "https://raw.githubusercontent.com/jeongahblairlee/rnaseqExplorer/refs/heads/main/notebook/function1.png",
-                            style = "width: 100%; height: auto; display: block; margin: auto;",
+                            style = "width: 80%; height: auto; display: block; margin: auto;",
                             alt = "function1"),
                    br(),
                    br(),
@@ -207,21 +219,21 @@ ui <- function() {
                    h4("2. Explore the data:"),
                    h5("2-1. Violin plot:"),
                    tags$img(src = "https://raw.githubusercontent.com/jeongahblairlee/rnaseqExplorer/refs/heads/main/notebook/function2.png",
-                            style = "width: 100%; height: auto; display: block; margin: auto;",
+                            style = "width: 80%; height: auto; display: block; margin: auto;",
                             alt = "function2"),
                    br(),
                    br(),
                    br(),
                    h5("2-2. Heatmap:"),
                    tags$img(src = "https://raw.githubusercontent.com/jeongahblairlee/rnaseqExplorer/refs/heads/main/notebook/function3.png",
-                            style = "width: 100%; height: auto; display: block; margin: auto;",
+                            style = "width: 80%; height: auto; display: block; margin: auto;",
                             alt = "function3"),
                    br(),
                    br(),
                    br(),
                    h5("2-3. PCA:"),
                    tags$img(src = "https://raw.githubusercontent.com/jeongahblairlee/rnaseqExplorer/refs/heads/main/notebook/function4.png",
-                            style = "width: 100%; height: auto; display: block; margin: auto;",
+                            style = "width: 80%; height: auto; display: block; margin: auto;",
                             alt = "function4"),
                    br()
                )
@@ -345,6 +357,8 @@ ui <- function() {
     )
   )
 }
+
+
 
 
 
@@ -1124,13 +1138,18 @@ server <- function(input, output, session) {
       "<li>🔍 Gene annotation</li>",
       "</ul>",  # End the unordered list
       br(),
-      "With its dynamic interactive design, <span class='bold-text'>rnaseqExplorer</span> is an essential tool for RNA-seq dataset analysis, empowering bench biologists to conduct exploratory data analysis with ease while delivering in-depth insights for seasoned data analysts. 💡",
+      "With its dynamic interactive design, <span class='bold-text'>rnaseqExplorer</span> serves as a transformative tool for RNA-seq data analysis, empowering researchers to easily conduct in-depth exploratory analysis while unlocking profound insights that drive impactful discoveries. 💡",
       br(),  # Add a line break before the citation
-      "<span class='italic-text'>If you use the rnaseqExplorer package in your research, please cite it as follows:</span><br>",
-      "<span class='italic-text'>Jeongah Lee. (2024). rnaseqExplorer: A comprehensive Shiny application for analyzing RNA sequencing data. R package version 0.1.0. https://github.com/jeongahblairlee/rnaseqExplorer</span>"
-      
+      br(),  # Add a line break before the citation
+      "<span class='highlight-text'> 📝 If you use the rnaseqExplorer package in your research, please cite it as follows:</span><br>",
+      "<span class='highlight-text'>Jeongah Lee. (2024). rnaseqExplorer: A comprehensive Shiny application for analyzing RNA sequencing data. R package version 0.1.0. https://github.com/jeongahblairlee/rnaseqExplorer</span>",
+      br(),  # Add a line break before the citation
+      br(),  # Add a line break before the citation
+      "📩 If you require any assistance or need help analyzing large datasets for further analysis, please do not hesitate to contact me (contact@jeongahlee.de).</span>"
+  
     ))
   })
+  
 
   # Observe event for switching tabs
   observeEvent(input$go_to_analysis, {
