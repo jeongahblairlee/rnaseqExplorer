@@ -27,6 +27,19 @@ library(rnaseqExplorer)
 launchApp()
 ```
 
+
+If you want to try the sample data; 
+
+```r
+if (!require("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+
+BiocManager::install("airway")
+library(airway)
+launchApp()
+```
+
+
 ### In web interface
 
 You can also access the application via the web interface:
