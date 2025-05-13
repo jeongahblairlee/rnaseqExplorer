@@ -31,6 +31,10 @@ launchApp()
 If you want to try the sample data; 
 
 ```r
+
+devtools::install_github("jeongahblairlee/rnaseqExplorer")
+library(rnaseqExplorer)
+
 if (!require("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
 
