@@ -28,7 +28,7 @@ launchApp()
 ```
 
 
-If you want to try the sample data; 
+If you want to try the example data:
 
 ```r
 
