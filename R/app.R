@@ -46,8 +46,8 @@ options(repos = c(CRAN = "https://cloud.r-project.org/"))  # Setting a CRAN mirr
   if (!requireNamespace('devtools', quietly = TRUE))
     install.packages('devtools')
   
-  devtools::install_github('kevinblighe/PCAtools')
-  
+  #devtools::install_github('kevinblighe/PCAtools')
+  BiocManager::install("PCAtools",force = TRUE)
   library(PCAtools)
 
 
@@ -395,7 +395,7 @@ server <- function(input, output, session) {
         if (!require("BiocManager", quietly = TRUE))
           install.packages("BiocManager")
         
-        BiocManager::install("airway")
+        BiocManager::install("airway",force = TRUE)
         library("airway")
         data(airway)
 
