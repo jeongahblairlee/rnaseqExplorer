@@ -11,20 +11,6 @@
 #' @export
 # Define the function to launch the Shiny app
 launchApp <- function() {
-#   # List of required packages
-#required_packages <- c(
-#     "shiny", "shinyWidgets", "ggplot2", "dplyr", "rstatix", 
-#     "ComplexHeatmap", "circlize", "DESeq2", "httr", "bslib"
-#   )
-#   
-#   # Check if packages are installed, install if necessary
-#   for (pkg in required_packages) {
-#     if (!requireNamespace(pkg, quietly = TRUE)) {
-#       install.packages(pkg)
-#     }
-#     library(pkg, character.only = TRUE)
-#   }
-#   
 
 
 options(repos = c(CRAN = "https://cloud.r-project.org/"))  # Setting a CRAN mirror
