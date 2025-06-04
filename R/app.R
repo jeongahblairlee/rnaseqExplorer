@@ -11,7 +11,9 @@
 #' @export
 # Define the function to launch the Shiny app
 launchApp <- function() {
-
+  update.packages(ask = FALSE)
+  BiocManager::install(update = TRUE, ask = FALSE)
+  
 
 options(repos = c(CRAN = "https://cloud.r-project.org/"))  # Setting a CRAN mirror
 
@@ -1154,8 +1156,6 @@ server <- function(input, output, session) {
   })
 
 }
-
-shinyApp(ui = ui, server = server)
 
 
 
